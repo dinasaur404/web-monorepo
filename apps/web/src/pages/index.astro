@@ -1,0 +1,72 @@
+---
+import { site } from "../lib/site";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={site.description} />
+    <title>{site.name}</title>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Astro + pnpm + Turborepo</p>
+      <h1>{site.name}</h1>
+      <p>{site.description}</p>
+    </main>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #101513;
+    color: #f4f0e6;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  main {
+    width: min(90vw, 48rem);
+    padding: 4rem;
+    border: 1px solid #56625b;
+    background: #18201c;
+    box-shadow: 1rem 1rem 0 #c5ff65;
+  }
+
+  h1 {
+    margin: 0.25rem 0 1rem;
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+  }
+
+  p {
+    max-width: 36rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .eyebrow {
+    color: #c5ff65;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 40rem) {
+    main {
+      padding: 2rem;
+      box-shadow: 0.6rem 0.6rem 0 #c5ff65;
+    }
+  }
+</style>

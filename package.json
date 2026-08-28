@@ -1,0 +1,30 @@
+{
+  "name": "web-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "check": "pnpm format:check && turbo run lint typecheck test build",
+    "deploy:all": "turbo run deploy",
+    "dev": "turbo run dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@10.26.2",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "turbo": "^2.10.12"
+  }
+}
