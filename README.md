@@ -1,5 +1,7 @@
 # web-monorepo
 
+[![CI](https://github.com/dinasaur404/web-monorepo/actions/workflows/ci.yml/badge.svg)](https://github.com/dinasaur404/web-monorepo/actions/workflows/ci.yml)
+
 An Astro monorepo managed with pnpm workspaces and Turborepo.
 
 ## Requirements
